@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  star-server:
+    build:
+      context: .
+    container_name: star-server
+    restart: always
+    logging:
+      driver: json-file
+      options: 
+        max-size: "5m"
+        max-file: "1"
+    ports:
+      - 13579:13579
+    entrypoint: npm start

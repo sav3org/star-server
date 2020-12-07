@@ -1,0 +1,16 @@
+{
+  "name": "star-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "start.js",
+  "dependencies": {
+    "libp2p-webrtc-star": "0.20.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "star-signal --port=13579",
+    "start:debug": "DEBUG=*,-socket.io:*,-socket.io-parser star-signal --port=13579"
+  },
+  "author": "",
+  "license": "ISC"
+}
