@@ -2,9 +2,10 @@
   "name": "star-server",
   "version": "1.0.0",
   "description": "",
-  "main": "start.js",
   "dependencies": {
-    "libp2p-webrtc-star": "0.20.1"
+    "libp2p-webrtc-star": "0.20.1",
+    "http-proxy": "1.18.1",
+    "selfsigned": "1.10.8"
   },
   "devDependencies": {},
   "scripts": {

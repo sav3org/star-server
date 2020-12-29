@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+working_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.." && cd "$working_dir" || exit
+
+docker rm -f "star-server-https-self-signed" 2> /dev/null
+docker-compose run -T --rm --service-ports \
+	--name "star-server-https-self-signed" \
+	--volume "$(pwd)/bin/reverse-proxy-https-self-signed.js:/var/star-server/reverse-proxy-https-self-signed.js" \
+	--entrypoint "node reverse-proxy-https-self-signed" star-server
